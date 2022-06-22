@@ -19,6 +19,7 @@ export function Analysis() {
       console.log(res);
       if (res.data) {
         setStage(statuses.output);
+        localStorage.setItem("analysis", JSON.stringify(res));
       } else {
         setStage(statuses.input);
       }

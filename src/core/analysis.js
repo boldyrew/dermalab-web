@@ -20,7 +20,7 @@ function getResult(res) {
   if (res != "normal") {
     data[res] = files[res].value;
   }
-  return { data, image, products };
+  return { data, image, products, date: new Date() };
 }
 
 function getProducts(res) {

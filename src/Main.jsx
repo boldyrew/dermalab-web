@@ -7,16 +7,13 @@ import { Analysis } from "./components/Analysis/Analysis";
 import { SignIn } from "./components/SignIn/SignIn";
 import { useLocation } from "react-router-dom";
 import { Home } from "./components/Home/Home";
+import { Profile } from "./components/Profile/Profile";
 
 export function Main() {
   const userInfoStr = localStorage.getItem("user");
   const userInfo = userInfoStr ? JSON.parse(userInfoStr) : null;
 
   let location = useLocation();
-
-  React.useEffect(() => {
-    console.log("lova ch", location, userInfo);
-  }, [location]);
 
   return (
     <div id="wrapper">
@@ -25,6 +22,7 @@ export function Main() {
           <Routes>
             <Route path="/analysis" element={<Analysis />}></Route>
             <Route path="/login" element={<SignIn />}></Route>
+            <Route path="/profile" element={ <Profile /> }></Route>
             <Route path="/" element={<Home />}></Route>
           </Routes>
         </main>

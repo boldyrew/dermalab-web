@@ -14,7 +14,7 @@ export function Header(props) {
             <a href="/analysis" className={props.location.pathname == "/analysis" ? "current" : ""}>Analysis</a>
             {props.userInfo && (
               <a
-                href="#"
+                href="/profile"
                 className="username"
               >{`${props.userInfo.name} ${props.userInfo.surname}`}</a>
             )}
