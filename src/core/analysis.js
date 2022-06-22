@@ -1,9 +1,10 @@
 import { files, photoErrors } from "../common/constants";
 
-import acne_result from '../assets/img/results/acne_result.jpg';
-import normal_result from '../assets/img/results/normal_result.jpg';
-import pigmetation_result from '../assets/img/results/pigmentation_result.jpg';
-import redness_result from '../assets/img/results/redness_result.jpg';
+import acne_result from "../assets/img/results/acne_result.jpg";
+import normal_result from "../assets/img/results/normal_result.jpg";
+import pigmetation_result from "../assets/img/results/pigmentation_result.jpg";
+import redness_result from "../assets/img/results/redness_result.jpg";
+import { products } from "../common/products";
 
 const initialResult = {
   normal: "",
@@ -14,25 +15,31 @@ const initialResult = {
 
 function getResult(res) {
   const data = { ...initialResult };
+  const products = getProducts(res);
+  const image = getImage(res);
   if (res != "normal") {
     data[res] = files[res].value;
-  }  
-  let image = "";
+  }
+  return { data, image, products };
+}
+
+function getProducts(res) {
+  return products.filter((p) => p.category === res);
+}
+
+function getImage(res) {
   switch (res) {
     case "normal":
-      image = normal_result;
-      break;
+      return normal_result;
     case "acne":
-      image = acne_result;
-      break;
+      return acne_result;
     case "redness":
-      image = redness_result;
-      break;
+      return redness_result;
     case "pigmentation":
-      image = pigmetation_result;
-      break;
+      return pigmetation_result;
+    default:
+      return "";
   }
-  return { data, image };
 }
 
 function getError(res) {
@@ -40,7 +47,7 @@ function getError(res) {
 }
 
 export function performAnalysis(file) {
-  console.log("file", file)
+  console.log("file", file);
   const name = file.split(".")[0];
 
   switch (name) {
@@ -56,7 +63,7 @@ export function performAnalysis(file) {
       return getError("many_faces");
     case "no_color":
       return getError("no_color");
-      case "not_full_face":
+    case "not_full_face":
       return getError("not_full_face");
     case "no_faces":
       return getError("no_faces");

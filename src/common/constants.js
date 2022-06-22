@@ -22,3 +22,4 @@ export const userInfo = {
   surname: "Iovcheva",
   email: "di@mail.com"
 }
+

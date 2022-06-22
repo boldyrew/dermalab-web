@@ -29,7 +29,13 @@ export function Analysis() {
     case statuses.analysis:
       return <AnalysisLoading />;
     case statuses.output:
-      return <AnalysisOutput result={result.data} image={result.image} />;
+      return (
+        <AnalysisOutput
+          result={result.data}
+          image={result.image}
+          products={result.products}
+        />
+      );
     case statuses.input:
     default:
       return (
