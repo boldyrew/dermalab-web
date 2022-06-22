@@ -1,3 +1,5 @@
+import product_img from '../../assets/img/product.jpg';
+
 export function Home() {
   return (<div className="container">
   <h2>Header</h2>
@@ -13,7 +15,7 @@ export function Home() {
     <li>
       <div className="product-item">
         <div className="product-item-img">
-          <img src="assets/img/product.jpg" />
+          <img src={product_img} />
         </div>
         <a href="#" className="product-item-title">
           Innisfree
@@ -23,7 +25,7 @@ export function Home() {
     <li>
       <div className="product-item">
         <div className="product-item-img">
-          <img src="assets/img/product.jpg" />
+          <img src={product_img} />
         </div>
         <a href="#" className="product-item-title">
           Innisfree
@@ -33,7 +35,7 @@ export function Home() {
     <li>
       <div className="product-item">
         <div className="product-item-img">
-          <img src="assets/img/product.jpg" />
+          <img src={product_img} />
         </div>
         <a href="#" className="product-item-title">
           Innisfree
@@ -43,7 +45,7 @@ export function Home() {
     <li>
       <div className="product-item">
         <div className="product-item-img">
-          <img src="assets/img/product.jpg" />
+          <img src={product_img} />
         </div>
         <a href="#" className="product-item-title">
           Innisfree
@@ -53,7 +55,7 @@ export function Home() {
     <li>
       <div className="product-item">
         <div className="product-item-img">
-          <img src="assets/img/product.jpg" />
+          <img src={product_img} />
         </div>
         <a href="#" className="product-item-title">
           Innisfree

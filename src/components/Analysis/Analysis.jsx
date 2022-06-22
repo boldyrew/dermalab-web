@@ -3,6 +3,7 @@ import { AnalysisInput } from "./AnalysisInput";
 import { AnalysisOutput } from "./AnalysisOutput";
 import { statuses } from "../../common/constants";
 import { performAnalysis } from "../../core/analysis";
+import loading_svg from "../../assets/img/loading.svg";
 
 export function Analysis() {
   const [stage, setStage] = React.useState("input");
@@ -31,10 +32,20 @@ export function Analysis() {
       return <AnalysisOutput result={result.data} image={result.image} />;
     case statuses.input:
     default:
-      return <AnalysisInput makeAnalysis={makeAnalysis} error={result?.error} />;
+      return (
+        <AnalysisInput makeAnalysis={makeAnalysis} error={result?.error} />
+      );
   }
 }
 
 export function AnalysisLoading() {
-  return <div>Loading</div>;
+  return (
+    <div className="container">
+      <div className="analysis">
+        <div className="loading">
+          <img src={loading_svg} />
+        </div>
+      </div>
+    </div>
+  );
 }

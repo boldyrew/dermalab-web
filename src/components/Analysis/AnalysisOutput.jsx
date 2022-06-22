@@ -1,5 +1,6 @@
 import React from 'react';
 import { SendToEmailPopup } from "../popups/SendToEmailPopup";
+import product_img from '../../assets/img/product.jpg';
 
 export function AnalysisOutput(props) {
   const [popupIsOpen, setPopupIsOpen] = React.useState(false);
@@ -58,7 +59,7 @@ export function AnalysisOutput(props) {
               <li>
                 <div className="product-item">
                   <div className="product-item-img">
-                    <img src="assets/img/product.jpg" />
+                    <img src={product_img} />
                   </div>
                   <a href="#" className="product-item-title">
                     Innisfree
@@ -68,7 +69,7 @@ export function AnalysisOutput(props) {
               <li>
                 <div className="product-item">
                   <div className="product-item-img">
-                    <img src="assets/img/product.jpg" />
+                    <img src={product_img} />
                   </div>
                   <a href="#" className="product-item-title">
                     Innisfree
@@ -78,7 +79,7 @@ export function AnalysisOutput(props) {
               <li>
                 <div className="product-item">
                   <div className="product-item-img">
-                    <img src="assets/img/product.jpg" />
+                    <img src={product_img} />
                   </div>
                   <a href="#" className="product-item-title">
                     Innisfree
@@ -88,7 +89,7 @@ export function AnalysisOutput(props) {
               <li>
                 <div className="product-item">
                   <div className="product-item-img">
-                    <img src="assets/img/product.jpg" />
+                    <img src={product_img} />
                   </div>
                   <a href="#" className="product-item-title">
                     Innisfree
@@ -98,7 +99,7 @@ export function AnalysisOutput(props) {
               <li>
                 <div className="product-item">
                   <div className="product-item-img">
-                    <img src="assets/img/product.jpg" />
+                    <img src={product_img} />
                   </div>
                   <a href="#" className="product-item-title">
                     Innisfree
